@@ -1,9 +1,11 @@
 <%- include('partials/head') %>
 
-    <% if (user) { %>
-        <h1>Welcome to the App <%= user.username %>!</h1>
-    <% } else { %>
-        <h1>Welcome to the App guest.</h1>
-    <% } %>
+<% if (user) { %>
+    <h1>Welcome to Cookbook, <%= user.username %>!</h1>
+    <a href="/recipes" class="btn btn-primary">View My Recipes</a>
+<% } else { %>
+    <h1>Welcome to Cookbook</h1>
+    <p>Please <a href="/auth/sign-in">sign in</a> or <a href="/auth/sign-up">sign up</a> to start adding recipes.</p>
+<% } %>
 
 <%- include('partials/footer') %>

@@ -1,0 +1,18 @@
+<%- include('../partials/head') %>
+
+<h1>Add a New Recipe</h1>
+
+<form action="/recipes" method="POST">
+    <label for="name">Recipe Name:</label>
+    <input type="text" name="name" required>
+
+    <label for="ingredients">Ingredients:</label>
+    <input type="text" name="ingredients" required>
+
+    <label for="instructions">Instructions:</label>
+    <textarea name="instructions" required></textarea>
+
+    <button type="submit" class="btn btn-success">Add Recipe</button>
+</form>
+
+<%- include('../partials/footer') %>
